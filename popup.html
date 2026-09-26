@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinterest Video Extractor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Pin Video Extractor</h1>
+    <button id="btnClose" title="Close">✖</button>
+  </header>
+
+  <section class="controls">
+    <label>Target count
+      <input type="number" id="targetCount" value="50" min="1" max="500" />
+    </label>
+    <div class="buttons">
+      <label class="toggle"><input type="checkbox" id="chkPreview" checked> Show previews</label>
+      <button id="btnStart">Start Extract</button>
+      <button id="btnClear">Clear Data</button>
+    </div>
+    <div class="progress">
+      <div class="label">Extract Progress: <span id="extractText">0/0</span></div>
+      <progress id="extractProgress" value="0" max="0"></progress>
+    </div>
+  </section>
+
+  <section class="bulk">
+    <div class="buttons">
+      <label class="toggle"><input type="checkbox" id="chkPreview" checked> Show previews</label>
+      <button id="btnSelectAll">Select All</button>
+      <button id="btnDeselectAll">Deselect All</button>
+      <button id="btnExportCsv">Export CSV</button>
+    </div>
+    <div class="buttons">
+      <label class="toggle"><input type="checkbox" id="chkPreview" checked> Show previews</label>
+      <button id="btnZip">Download Videos ZIP</button>
+      <button id="btnIndiv">Download One By One</button>
+    </div>
+    <div class="progress">
+      <div class="label">Download Progress: <span id="downloadText">0/0</span></div>
+      <progress id="downloadProgress" value="0" max="0"></progress>
+    </div>
+  </section>
+
+  <section id="grid" class="grid"></section>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
